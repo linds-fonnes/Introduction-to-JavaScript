@@ -17,8 +17,13 @@ Do the following:
 
    HINT: no function required
 */
+let age = 23
+const votingAge = 18
+if (age >= 18) {
+  console.log(true);
+}
 
-
+console.log(age);
 
 /*
 Task 1b - Values
@@ -30,7 +35,14 @@ Do the following:
 
    HINT: no function required
 */
+let x = 5;
+let y = 7;
 
+if (x < y) {
+  console.log(y ** 3);
+}
+
+console.log();
 
 
 
@@ -46,6 +58,8 @@ Do the following:
    HINT: look up the Number method
 */
 
+const year = '1999';
+console.log(Number(year));
 
 
 
@@ -58,9 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    console.log(a * b);
   }
+console.log(multiply(5,4));
 
 
 
@@ -74,10 +89,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanAge){
+    return humanAge * 7;
 }
-
+console.log(dogYears(2));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,9 +122,32 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if (weight <= 5 && age >= 1){
+      return weight * .05 ;
+    }
+    else if (weight <=10 && weight >= 6 && age >=1){
+      return weight * .04;
+    }
+    else if (weight <=15 && weight >=11 && age >=1){
+      return weight * .03;
+    }
+    else if (weight > 15 && age >= 1){
+      return weight * .02;
+    }
+    else if (age >= .16 && age <= .33 ){
+      return weight * .1;
+    }
+    else if (age >= .33 && age <= .58){
+      return weight * .05;
+    }
+    else if (age >= .58 && age <= 1){
+      return weight * .04;
+    }
   }
+
+  console.log(hungryDog(15,1));
+
 
 
 
@@ -127,8 +165,8 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(guess){
+    if Math.random()
 }
   
   
@@ -174,9 +212,11 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+        while (number > 0) 
   }
+
+  console.log(annoyingSong(4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -194,9 +234,25 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(number){
+    if (number >= 90 && number <= 100) {
+      return ('A');
+    }
+    else if (number >= 80 && number <= 89){
+      return ('B');
+    }
+    else if (number >= 70 && number <= 79){
+      return ('C');
+    }
+    else if (number >= 60 && number <= 69){
+      return ('D');
+    }
+    else if (number < 60){
+      return ('F');
+    }
   }
+
+  console.log grade(100);
   
   
   
