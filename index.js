@@ -228,11 +228,15 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(number){
-        while (number > 0) 
-  }
-
-  console.log(annoyingSong(4));
+function annoyingSong(bottles){ 
+  while (bottles >= 1){
+ console.log(bottles + " bottles of soda on the wall");
+console.log(bottles + " bottles of soda, take one down pass it around");
+console.log(bottles - 1 " bottles of soda on the wall");
+bottles = bottles - 1;
+}
+}
+console.log(annoyingSong(4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
