@@ -92,7 +92,7 @@ Do the following:
 function dogYears(humanAge){
     return humanAge * 7;
 }
-console.log(dogYears(2));
+console.log(dogYears(5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -165,11 +165,25 @@ Use the game function below to do the following:
 let randomNum = Math.random();
 function game(choice, randomNum){
     if (randomNum <= .33) {
-      d
-      
+      let compChoice = 'rock' ;
+      }
+    else if (randomNum <= .66 && randomNum >= .34){
+      let compChoice = 'paper' ;
     }
+    else if (randomNum <= 1 && randomNum >= .67){
+      let compChoice = 'scissors';
+    }
+   if (choice === 'rock' && compChoice === 'scissors' || choice === 'scissors' && compChoice === 'paper' || choice === 'paper' && compChoice === 'rock'){
+     return('You win!');
+   }
+   else if (choice === 'scissors' && compChoice === 'rock' || choice ==='paper' && compChoice === 'scissors' || choice === 'rock' && compChoice === 'paper'){
+     return('You lose!');
+   }
+   else if (choice === compChoice){
+     return('It is a tie!');
+   }
 }
-  
+  console.log(game('rock',randomNum));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -183,9 +197,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilometers){
+    return(kilometers * .621371);
   }
+  console.log(miles(10));
 
 
 
@@ -197,10 +212,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm * .0328084;
   }
- 
+ console.log(feet(500));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
