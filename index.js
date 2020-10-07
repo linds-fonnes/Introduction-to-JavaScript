@@ -162,28 +162,32 @@ Use the game function below to do the following:
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-let randomNum = Math.random();
-function game(choice, randomNum){
-    if (randomNum <= .33) {
-      let compChoice = 'rock' ;
+// let 0 === rock;
+// let 1 === paper;
+// let 2 === scissors;
+const computer = Math.floor(Math.random() * 3);
+function game(human, computer){
+      if(human === 'rock' && computer === 0){
+        return "it's a tie";
+      } else if (human === 'rock' && computer === 1){
+        return 'you lose';
+      } else if (human === 'rock' && computer === 2) {
+        return 'you win';
+      } else if (human === 'paper' && computer === 0){
+        return 'you win';
+      } else if (human === 'paper' && computer === 1){
+        return "it's a tie";
+      } else if (human === 'paper' && computer === 2){
+        return 'you lose';
+      } else if (human === 'scissors' && computer === 0){
+        return 'you lose';
+      } else if (human === 'scissors' && computer === 1){
+        return 'you win';
+      } else if (human === 'scissors' && computer === 2){
+        return "it's a tie";
       }
-    else if (randomNum <= .66 && randomNum >= .34){
-      let compChoice = 'paper' ;
-    }
-    else if (randomNum <= 1 && randomNum >= .67){
-      let compChoice = 'scissors';
-    }
-   if (choice === 'rock' && compChoice === 'scissors' || choice === 'scissors' && compChoice === 'paper' || choice === 'paper' && compChoice === 'rock'){
-     return('You win!');
-   }
-   else if (choice === 'scissors' && compChoice === 'rock' || choice ==='paper' && compChoice === 'scissors' || choice === 'rock' && compChoice === 'paper'){
-     return('You lose!');
-   }
-   else if (choice === compChoice){
-     return('It is a tie!');
-   }
 }
-  console.log(game('rock',randomNum));
+  game('scissors',computer);
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
