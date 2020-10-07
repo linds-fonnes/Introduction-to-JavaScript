@@ -75,7 +75,7 @@ Do the following:
 function multiply(a, b){
     console.log(a * b);
   }
-console.log(multiply(5,4));
+(multiply(5,7));
 
 
 
@@ -170,24 +170,24 @@ function game(human, computer){
       if(human === 'rock' && computer === 0){
         return "it's a tie";
       } else if (human === 'rock' && computer === 1){
-        return 'you lose';
+        return 'you lose!';
       } else if (human === 'rock' && computer === 2) {
-        return 'you win';
+        return 'you win!';
       } else if (human === 'paper' && computer === 0){
-        return 'you win';
+        return 'you win!';
       } else if (human === 'paper' && computer === 1){
         return "it's a tie";
       } else if (human === 'paper' && computer === 2){
-        return 'you lose';
+        return 'you lose!';
       } else if (human === 'scissors' && computer === 0){
-        return 'you lose';
+        return 'you lose!';
       } else if (human === 'scissors' && computer === 1){
-        return 'you win';
+        return 'you win!';
       } else if (human === 'scissors' && computer === 2){
         return "it's a tie";
       }
 }
-  game('scissors',computer);
+  game('rock',computer);
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -217,7 +217,7 @@ Using the feet function below do the following:
 */
 
 function feet(cm){
-    return cm * .0328084;
+    return cm / 30.48;
   }
  console.log(feet(500));
 
@@ -258,19 +258,19 @@ Using the grade function below do the following:
   
 function grade(number){
     if (number >= 90 && number <= 100) {
-      return ('A');
+      return ('you got a A');
     }
     else if (number >= 80 && number <= 89){
-      return ('B');
+      return ('you got a B');
     }
     else if (number >= 70 && number <= 79){
-      return ('C');
+      return ('you got a C');
     }
     else if (number >= 60 && number <= 69){
-      return ('D');
+      return ('you got a D');
     }
     else if (number < 60){
-      return ('F');
+      return ('you got a F');
     }
   }
 
