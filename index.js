@@ -162,9 +162,12 @@ Use the game function below to do the following:
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
-
-function game(guess){
-    if Math.random()
+let randomNum = Math.random();
+function game(choice, randomNum){
+    if (randomNum <= .33) {
+      d
+      
+    }
 }
   
   
