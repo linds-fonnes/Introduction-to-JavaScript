@@ -274,7 +274,7 @@ function grade(number){
     }
   }
 
-  console.log grade(100);
+  console.log(grade(100));
   
   
   
